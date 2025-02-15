@@ -25,9 +25,9 @@ From the maps, only trainTestModel and varyingMeshScripts contain files that are
 - `test_testNIterationMultipleMeshesPerlin.py` – Test Perlin noise models on Perlin noise data.
 
 ##### Training Scripts
-- `train_trainScriptMultipleMeshesAuto.py` – Trains a model on multiple meshes automatically.
-- `train_trainScriptMultipleMeshesAutoPerlin.py` – Similar to the above, but includes Perlin noise augmentation.
-- `train_trainScriptMultipleMeshesMagAuto.py` – Trains a model with magnitude-based configurations.
+- `train_trainScriptMultipleMeshesAuto.py` – Train a model on CFD data.
+- `train_trainScriptMultipleMeshesAutoPerlin.py` – Train a model on Perlin noise data.
+- `train_trainScriptMultipleMeshesMagAuto.py` – Train the pressure correction models (only CFD data).
 
 ### varyingMeshScripts
 
