@@ -1,0 +1,3 @@
+poissonFoamLinearSolverTestCFD.C
+
+EXE = $(FOAM_APPBIN)/poissonFoamLinearSolverTestCFD

@@ -1,0 +1,3 @@
+poissonFoamExplicit.C
+
+EXE = $(FOAM_APPBIN)/poissonFoamExplicit
