@@ -1,0 +1,104 @@
+# Configuration file with default parameters.
+# Some can be modified through the command line. See help function for training
+# script and README.md for more info.
+# This table is saved to disk (as pytorch objects) on every epoch
+# so that simulations can be paused and restarted.
+#=========================================
+#   MODEL
+#=========================================
+
+#=========================================
+#   DATA
+#=========================================
+# test_case_path : Dataset location
+test_case_path: "/home/justinbrusche/datasets/step1"
+
+edgeAttrName: "conv_4666"
+# numWorkers : number of parallel workers for dataloader. Set to 0 to allow PyTorch
+# to automatically manage loading.
+numWorkers: 0
+# shuffleTraining : Shuffles dataset
+shuffleTraining: true
+
+#=========================================
+#   OUTPUT
+#=========================================
+# modelDir : Output folder for trained model and loss log.
+#modelDir: "/home/justinbrusche/modeldir_ConvMeanSmall"
+modelDir: "/home/justinbrusche/modeldirs_step1/veryVerySmall"
+
+# modelFilename : Trained model name
+modelFilename: "step_3_conv_medium"
+
+#=========================================
+#   TRAINING MONITORING
+#=========================================
+
+# freqToFile : Epoch frequency for loss output to file/image saving.
+freqToFile: 2
+# printTraining : Debug options for training.
+# Prints or shows validation dataset and compares net
+# output to GT.
+# Options: save (save figures), show (shows in windows), none
+printTraining: "save" 
+
+#=========================================
+#   TRAINING PARAMETER
+#=========================================
+batchSize: 10
+
+nTrainData: 1000
+nTestData: 100
+# maxEpochs : Maximum number of epochs
+maxEpochs: 200
+# resume : resume training from checkpoint.
+resumeTraining: true
+modelParam:
+    # model : 'ScaleNet'
+    # model_name options
+    #   -MultiScale: uses a fixed multiScale architecture found on lib/multi_scale_net.py
+    #
+    #   -MultiScaleNetSmall: uses a fixed multiScale architecture found on lib/multi_scale_net_small.py
+    #
+    #   -MonoScale: uses a fixed monoScale architecture found on lib/mono_scale.py
+    #
+    #   -FlexiUnet: uses a flexible Unet architecture, defining the scales and kernel size.
+    #   If Using FlexiUNet the architecture is defined by the scales entry:
+    #   scales:
+    #    depth_0: [[2, 32, 20], [40, 32, 1]]
+    #    depth_1: [[20, 56], [96, 20]]
+    #    depth_2: [[56, 30], [50, 40]]
+    #    depth_3: [[30, 20, 20], [80, 10, 20]]
+    #    depth_4: [20, 60]
+    #
+    #   -FlexiNet: uses a flexible architecture, mixture between MultiScale and Unet
+    #   If Using FlexiNet the architecture is defined by the filters entry:
+    #       filters: [
+    #           [36, 36, 36, 36, 36, 32],
+    #           [36, 36, 36, 36, 36, 32],
+    #           [36, 36, 36, 36, 36, 32]
+    #           ]   
+    model: "final_design_cfd"
+    size: "VeryVerySmallLessLayers"
+    model_name: 'final_design_cfd'
+
+    scales:
+        depth_0: [[2, 32, 20], [40, 32, 1]]
+        depth_1: [[20, 56], [96, 20]]
+        depth_2: [[56, 30], [50, 40]]
+        depth_3: [[30, 20, 20], [80, 10, 20]]
+        depth_4: [20, 60]
+
+    inputChannels:
+        source: true
+        pEqnD: true
+        pEqnFace: true
+        pointType: false
+        cellType: false
+        BCInput: true
+        gradientBCInput: False
+    # lr : learning rate. If using scientific notation, necessary to precise type
+    # for yaml->python cast.
+    lr: !!python/float 1e-3
+    # fooLambda : Weighting for each loss. Set to 0 to disable loss.
+
