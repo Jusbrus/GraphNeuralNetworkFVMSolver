@@ -1,7 +1,7 @@
 # Graph neural network accelerated pressure Poisson solver
 
 ## Overview
-This repository contains the files used during my master thesis about using graph neural networks to accelerate solving the pressure Poisson equation. The code leverages PyTorch and OpenFOAM to analyze performance metrics across different sample meshes and configurations. The repository includes plotting utilities, training logs, and speed tests for different solver configurations. To use the files
+This repository contains the files used during my master thesis about using graph neural networks to accelerate solving the pressure Poisson equation. The repository includes plotting utilities, training scripts, and performance tests. To use the code, one must first set up the datasets using the scripts in the "varyingMeshScripts" map.
 
 ## Dependencies
 
