@@ -20,16 +20,20 @@ This repository contains scripts for training, evaluating, and testing machine l
 - `train_trainScriptMultipleMeshesAutoPerlin.py` – Similar to the above, but includes Perlin noise augmentation.
 - `train_trainScriptMultipleMeshesMagAuto.py` – Trains a model with magnitude-based configurations.
 
-## Dependencies
-To use this repository, install the following dependencies:
+### Channel Naming Convention
 
-- Python 3.x
-- PyTorch
-- OpenFOAM
-- Matplotlib
-- NumPy
-- YAML
-- Pickle
+This table describes the naming convention used for different channel sizes.
+
+| Channels | Named              |
+|----------|--------------------|
+| 6        | veryVeryVerySmall  |
+| 8        | veryVerySmall      |
+| 12       | verySmall          |
+| 16       | small              |
+| 24       | medium             |
+| 32       | fullscale          |
+
+
 
 ## Usage
 
