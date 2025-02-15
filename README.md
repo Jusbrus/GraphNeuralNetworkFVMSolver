@@ -53,7 +53,7 @@ This table describes the naming convention used for different channel sizes.
 
 
 ## Usage
-- The root directory should call "/home/justinbrusche/"
+- The root directory should be "/home/justinbrusche/"
 - Modify the `config_file` in the script to specify different configurations.
 
 
