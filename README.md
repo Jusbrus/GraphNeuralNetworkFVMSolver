@@ -1,4 +1,4 @@
-# CFD Performance Analysis and Training Scripts
+# Graph neural network accelerated pressure Poisson solver
 
 ## Overview
 This repository contains scripts for training, evaluating, and testing machine learning models for computational fluid dynamics (CFD) simulations. The code leverages PyTorch and OpenFOAM to analyze performance metrics across different sample meshes and configurations. The repository includes plotting utilities, training logs, and speed tests for different solver configurations.
