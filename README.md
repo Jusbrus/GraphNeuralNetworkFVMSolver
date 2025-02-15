@@ -57,14 +57,8 @@ This table describes the naming convention used for different channel sizes.
 - Modify the `config_file` in the script to specify different configurations.
 
 
-### Testing
-Run a test script as follows:
-```bash
-python test_SpeedtestNIterationsMultipleMeshesCFDInclMag.py
-```
-
 ## Configuration
-Configuration files are located in the `config_files/` directory. Adjust these to modify training parameters, test cases, and other settings.
+Configuration files are located in the `config_files.../` directory. Adjust these to modify training parameters, test cases, and other settings.
 
 ## License
 This project is part of a master thesis of the TU Delft.
