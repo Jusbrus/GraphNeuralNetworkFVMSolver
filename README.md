@@ -10,19 +10,19 @@ This repository contains the files used during my master thesis about using grap
 
 ## Scripts_final
 
-From the maps, only trainTestModel and varyingMeshScripts contain files that are called to train and test the models. The other maps contain scripts that are called from these scripts.
+From the maps, only trainTestModel and varyingMeshScripts contain files that are called to train and test the models. The other maps contain scripts called from these scripts.
 
 ### trainTestModel
 
 ##### Plotting Scripts
-- `plot_performance_per_sample.py` – Plots the performance of the trained model per sample.
+- `plot_performance_per_sample.py` – Plots performance per sample for the Perlin noise data.
 - `plot_performance_per_sample_cfd.py` – Similar to the above, but includes CFD-based computations.
 - `plot_train_log.py` – Visualizes training loss curves from log files.
 
 ##### Testing Scripts
-- `test_PerlinToCFDSpeedtestNIterationsMultipleMeshesCFDInclMag.py` – Tests performance of different solver iterations with Perlin noise-based initialization.
-- `test_SpeedtestNIterationsMultipleMeshesCFDInclMag.py` – Runs speed tests with multiple meshes using OpenFOAM.
-- `test_testNIterationMultipleMeshesPerlin.py` – Alternative test script for multiple meshes with Perlin noise initialization.
+- `test_PerlinToCFDSpeedtestNIterationsMultipleMeshesCFDInclMag.py` –Tests Perlin Noise models on CFD data.
+- `test_SpeedtestNIterationsMultipleMeshesCFDInclMag.py` – Tests CFD models on CFD data.
+- `test_testNIterationMultipleMeshesPerlin.py` – Test Perlin noise models on Perlin noise data.
 
 ##### Training Scripts
 - `train_trainScriptMultipleMeshesAuto.py` – Trains a model on multiple meshes automatically.
@@ -33,7 +33,7 @@ From the maps, only trainTestModel and varyingMeshScripts contain files that are
 
 - `createMeshes.py` – Generates different types of CFD meshes (only called from other scripts).
 - `setupCfdDataset.py` – Sets up a CFD dataset by generating meshes and running simulations.
-- `setupPerlinNoiseDataset.py` – Generates datasets using Perlin Noise to create variable structures.
+- `setupPerlinNoiseDataset.py` – Generates datasets using Perlin Noise to create a diverse dataset.
 - `setupLinearTests.py` – Prepares linear solver tests for benchmarking.
 
 
@@ -71,6 +71,8 @@ python test_SpeedtestNIterationsMultipleMeshesCFDInclMag.py
 ## Configuration
 Configuration files are located in the `config_files/` directory. Adjust these to modify training parameters, test cases, and other settings.
 
+## License
+This project is part of a master thesis of the TU Delft.
 
 ## Contact
 For questions, reach out via email
