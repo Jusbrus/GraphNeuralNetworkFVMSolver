@@ -53,14 +53,9 @@ This table describes the naming convention used for different channel sizes.
 
 
 ## Usage
+- The root directory should call "/home/justinbrusche/"
+- Modify the `config_file` in the script to specify different configurations.
 
-### Training
-To train a model, use:
-```bash
-python train_trainScriptMultipleMeshesAuto.py
-```
-
-Modify the `config_file_list` in the script to specify different configurations.
 
 ### Testing
 Run a test script as follows:
